@@ -75,7 +75,7 @@ int main()
 			index1+=1;
 		}
 	}
-	panjang1 = strlen(baris2)-1;
+	panjang1 = strlen(baris2);
 	
 	found = 0;
 	while(found == 0 && index2!=strlen(baris1)-2){
@@ -87,7 +87,7 @@ int main()
 			index2+=1;
 		}
 	}
-	panjang2 = strlen(baris3)-1;
+	panjang2 = strlen(baris3);
 	
 	found = 0;
 	while(found == 0 && index3!=strlen(baris1)-2){
@@ -99,7 +99,7 @@ int main()
 			index3+=1;
 		}
 	}
-	panjang3 = strlen(baris4)-1;
+	panjang3 = strlen(baris4);
 	
 	//mengalikan setiap index dengan panjang, kemudian menyusunnya
 	jumlah1 = index1*panjang1;
