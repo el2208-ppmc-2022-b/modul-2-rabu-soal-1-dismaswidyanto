@@ -28,7 +28,7 @@ int main()
 	char baris5[MAX_LEN];
 	char temp[MAX_LEN];
 	char sandi[MAX_LEN];
-	int index1, index2, index3;
+	int index1=0, index2=0, index3=0;
 	int panjang1, panjang2, panjang3;
 	int jumlah1, jumlah2, jumlah3;
 			
@@ -60,43 +60,70 @@ int main()
 	token = strtok(line, "\n");
 	strcpy(baris5, token);
 	
+	fclose(stream);
+	
 	//mencari indeks dan panjang kata dari setiap baris
 	char *ptr;
 	
-	ptr = strstr(baris1, baris2);
-	index1 = ptr - baris1 + 1;
-	panjang1 = strlen(baris2);
+	int found=0;
+	while(found == 0 && index1!=strlen(baris1)-2){
+		if(strncmp(baris1+index1,baris2,strlen(baris2)-1)==0){
+			found = 1;
+			index1+=1;
+		}
+		else{
+			index1+=1;
+		}
+	}
+	panjang1 = strlen(baris2)-1;
 	
-	ptr = strstr(baris1, baris3);
-	index2 = ptr - baris1 + 1;
-	panjang2 = strlen(baris3);
+	found = 0;
+	while(found == 0 && index2!=strlen(baris1)-2){
+		if(strncmp(baris1+index2,baris3,strlen(baris3)-1)==0){
+			found = 1;
+			index2+=1;
+		}
+		else{
+			index2+=1;
+		}
+	}
+	panjang2 = strlen(baris3)-1;
 	
-	ptr = strstr(baris1, baris4);
-	index3 = ptr - baris1 + 1;
-	panjang3 = strlen(baris4);
+	found = 0;
+	while(found == 0 && index3!=strlen(baris1)-2){
+		if(strncmp(baris1+index3,baris4,strlen(baris4)-1)==0){
+			found = 1;
+			index3+=1;
+		}
+		else{
+			index3+=1;
+		}
+	}
+	panjang3 = strlen(baris4)-1;
 	
 	//mengalikan setiap index dengan panjang, kemudian menyusunnya
 	jumlah1 = index1*panjang1;
-	itoa(jumlah1, temp, 10);
-	strcat(sandi, temp);
+	sprintf(temp,"%d",jumlah1);
+	strcpy(sandi, temp);
 	
 	jumlah2 = index2*panjang2;
-	itoa(jumlah2, temp, 10);
+	sprintf(temp,"%d",jumlah2);
 	strcat(sandi, temp);
 	
 	jumlah3 = index3*panjang3;
-	itoa(jumlah3, temp, 10);
+	sprintf(temp,"%d",jumlah3);
 	strcat(sandi, temp);
-		
+	
 	//cetak output berdasarkan kata di baris kelima
 	printf("Kata sandi untuk membuka truk: ");
 	
-	if (baris5 == "ikuzo"){
-		printf("%s\n", sandi);
+	if (strncmp(baris5,"ikuzo",5)==0){
+		for(int i = strlen(sandi);i>=0;i--){
+			printf("%c", sandi[i]);
+		}
 	}
 	
 	else{
-		strrev(sandi);
 		printf("%s\n", sandi);
 	}
 
