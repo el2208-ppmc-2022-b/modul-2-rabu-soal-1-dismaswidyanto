@@ -63,6 +63,7 @@ int main()
 	fclose(stream);
 	
 	//mencari indeks dan panjang kata dari setiap baris
+	char *ptr;
 	
 	int found=0;
 	while(found == 0 && index1!=strlen(baris1)-2){
@@ -102,16 +103,23 @@ int main()
 	
 	//mengalikan setiap index dengan panjang, kemudian menyusunnya
 	jumlah1 = index1*panjang1;
+	printf("%d %d %d\n",index1,panjang1,jumlah1);
 	sprintf(temp,"%d",jumlah1);
 	strcpy(sandi, temp);
+	printf("%s\n",temp);
+	printf("%s\n",sandi);
 	
 	jumlah2 = index2*panjang2;
 	sprintf(temp,"%d",jumlah2);
 	strcat(sandi, temp);
+	printf("%s\n",temp);
+	printf("%s\n",sandi);
 	
 	jumlah3 = index3*panjang3;
 	sprintf(temp,"%d",jumlah3);
 	strcat(sandi, temp);
+	printf("%s\n",temp);
+	printf("%s\n",sandi);
 	
 	//cetak output berdasarkan kata di baris kelima
 	printf("Kata sandi untuk membuka truk: ");
@@ -127,4 +135,5 @@ int main()
 	}
 
 	return 0;
+	
 }
