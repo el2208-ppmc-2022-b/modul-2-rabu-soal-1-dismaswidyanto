@@ -15,7 +15,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "file2.txt",
-      "output": "Kata sandi untuk membuka truk: 184661",
+      "output": "Kata sandi untuk membuka truk: 166481",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -25,7 +25,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "file3.txt",
-      "output": "Kata sandi untuk membuka truk: 80121163",
+      "output": "Kata sandi untuk membuka truk: 36112108",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -45,7 +45,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "file5.txt",
-      "output": "Kata sandi untuk membuka truk: 611094",
+      "output": "Kata sandi untuk membuka truk: 490116",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -65,7 +65,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "file7.txt",
-      "output": "Kata sandi untuk membuka truk: 213276",
+      "output": "Kata sandi untuk membuka truk: 672312",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -85,7 +85,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "file9.txt",
-      "output": "Kata sandi untuk membuka truk: 4026942",
+      "output": "Kata sandi untuk membuka truk: 2496204",
       "comparison": "included",
       "timeout": 1,
       "points": 10
@@ -95,7 +95,7 @@
       "setup": "make soal-01",
       "run": "./soal-01",
       "input": "file10.txt",
-      "output": "Kata sandi untuk membuka truk: 081094",
+      "output": "Kata sandi untuk membuka truk: 490180",
       "comparison": "included",
       "timeout": 1,
       "points": 10
