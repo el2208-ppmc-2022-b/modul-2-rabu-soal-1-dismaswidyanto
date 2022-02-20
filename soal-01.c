@@ -125,7 +125,7 @@ int main()
 	printf("Kata sandi untuk membuka truk: ");
 	
 	if (strncmp(baris5,"ikuzo",5)==0){
-		for(int i = strlen(sandi);i>=0;i--){
+		for(int i = strlen(sandi)-1;i>=0;i--){
 			printf("%c", sandi[i]);
 		}
 	}
