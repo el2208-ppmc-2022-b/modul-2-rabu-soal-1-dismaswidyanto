@@ -63,11 +63,10 @@ int main()
 	fclose(stream);
 	
 	//mencari indeks dan panjang kata dari setiap baris
-	char *ptr;
 	
 	int found=0;
-	while(found == 0 && index1!=strlen(baris1)-2){
-		if(strncmp(baris1+index1,baris2,strlen(baris2)-1)==0){
+	while(found == 0 && index1!=strlen(baris1)-1){
+		if(strncmp(baris1+index1,baris2,strlen(baris2))==0){
 			found = 1;
 			index1+=1;
 		}
@@ -78,8 +77,8 @@ int main()
 	panjang1 = strlen(baris2);
 	
 	found = 0;
-	while(found == 0 && index2!=strlen(baris1)-2){
-		if(strncmp(baris1+index2,baris3,strlen(baris3)-1)==0){
+	while(found == 0 && index2!=strlen(baris1)-1){
+		if(strncmp(baris1+index2,baris3,strlen(baris3))==0){
 			found = 1;
 			index2+=1;
 		}
@@ -90,8 +89,8 @@ int main()
 	panjang2 = strlen(baris3);
 	
 	found = 0;
-	while(found == 0 && index3!=strlen(baris1)-2){
-		if(strncmp(baris1+index3,baris4,strlen(baris4)-1)==0){
+	while(found == 0 && index3!=strlen(baris1)-1){
+		if(strncmp(baris1+index3,baris4,strlen(baris4))==0){
 			found = 1;
 			index3+=1;
 		}
