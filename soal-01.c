@@ -63,7 +63,6 @@ int main()
 	fclose(stream);
 	
 	//mencari indeks dan panjang kata dari setiap baris
-	char *ptr;
 	
 	int found=0;
 	while(found == 0 && index1!=strlen(baris1)-2){
